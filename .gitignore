@@ -1,0 +1,8 @@
+## IDES ##
+.vs/
+.idea/
+
+### DotnetCore ###
+# .NET Core build folders
+bin/
+obj/
