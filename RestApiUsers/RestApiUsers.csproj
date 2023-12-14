@@ -8,7 +8,21 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="MySql.Data" Version="8.2.0" />
+    <PackageReference Include="NHibernate" Version="5.4.7" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.4.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Common\Database\Config\" />
+    <Folder Include="Common\Database\Helpers\" />
+    <Folder Include="Modules\Users\Application\" />
+    <Folder Include="Modules\Users\Domain\Entities\" />
+    <Folder Include="Modules\Users\Domain\Repositories\" />
+    <Folder Include="Modules\Users\Infrastructure\Controllers\" />
+    <Folder Include="Modules\Users\Infrastructure\Mapping\" />
+    <Folder Include="Modules\Users\Infrastructure\Repositories\" />
+    <Folder Include="Modules\Users\Infrastructure\Services\" />
   </ItemGroup>
 
 </Project>
