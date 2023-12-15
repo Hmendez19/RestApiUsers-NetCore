@@ -1,4 +1,5 @@
 using System.Text.RegularExpressions;
+using RestApiUsers.Common.Exceptions.Custom;
 using RestApiUsers.Common.Validators.Value;
 using RestApiUsers.Modules.Users.Domain.Exceptions;
 
@@ -51,7 +52,7 @@ public class Email:ValueValidator
         
         if (value.Length > maxLength)
         {
-            throw new EmailNotValidException($"Email no puede tener más de {maxLength} caracteres");
+            throw new UnprocessableContentException($"Email no puede tener más de {maxLength} caracteres");
         }
     }
 }

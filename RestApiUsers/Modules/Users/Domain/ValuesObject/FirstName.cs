@@ -1,3 +1,4 @@
+using RestApiUsers.Common.Exceptions.Custom;
 using RestApiUsers.Common.Validators.Value;
 using RestApiUsers.Modules.Users.Domain.Exceptions;
 
@@ -38,7 +39,7 @@ public class FirstName:ValueValidator
         
         if (value.Length > maxLength)
         {
-            throw new FirstNameNotValidException($"FirstName no puede tener más de {maxLength} caracteres");
+            throw new UnprocessableContentException($"FirstName no puede tener más de {maxLength} caracteres");
         }
     }
 }

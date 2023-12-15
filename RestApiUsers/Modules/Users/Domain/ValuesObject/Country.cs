@@ -1,3 +1,4 @@
+using RestApiUsers.Common.Exceptions.Custom;
 using RestApiUsers.Common.Validators.Value;
 using RestApiUsers.Modules.Users.Domain.Exceptions;
 
@@ -37,7 +38,7 @@ public class Country:ValueValidator
         
         if (value.Length > maxLength)
         {
-            throw new CountryNotValidException($"Country no puede tener más de {maxLength} caracteres");
+            throw new UnprocessableContentException($"Country no puede tener más de {maxLength} caracteres");
         }
     }
 }
