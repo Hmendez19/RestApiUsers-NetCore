@@ -1,10 +1,8 @@
 using Microsoft.AspNetCore.Mvc;
-using Newtonsoft.Json;
 using RestApiUsers.Common.Exceptions.Custom;
 using RestApiUsers.Common.Exceptions.Handler;
 using RestApiUsers.Modules.Users.Domain.Dto;
 using RestApiUsers.Modules.Users.Domain.Entities;
-using RestApiUsers.Modules.Users.Domain.Exceptions;
 using RestApiUsers.Modules.Users.Infrastructure.Services;
 
 namespace RestApiUsers.Modules.Users.Infrastructure.Controllers;
