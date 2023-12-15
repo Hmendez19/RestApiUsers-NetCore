@@ -38,6 +38,10 @@ public class UsersController: ControllerBase
         {
             return CustomHandleException.Handle(ex, StatusCodes.Status409Conflict);
         }
+        catch (UnprocessableContentException ex)
+        {
+            return CustomHandleException.Handle(ex, StatusCodes.Status422UnprocessableEntity);
+        }
         catch (Exception ex)
         {
             return Task.FromResult<IActionResult>(StatusCode(StatusCodes.Status500InternalServerError,ex.Message));
